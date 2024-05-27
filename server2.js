@@ -7,6 +7,7 @@ const voiceToTextRoutes = require('./routes/voiceToTextRoutes');
 const LetterGeneratorRoutes = require('./routes/letterRoutes');
 const UserDetails = require('./routes/userRoutes');
 const formsubmit = require('./routes/formSubmissionRoutes');
+const Authentication = require('./routes/authentication');
 
 const connectDB = require('./database/connectionStringdb');
 const app = express();
@@ -23,6 +24,7 @@ app.use('/api/voiceToText', voiceToTextRoutes);
 app.use('/api/LetterGenerator', LetterGeneratorRoutes);
 app.use('/api/UserData',UserDetails );
 app.use('/api/FormSubmission',formsubmit );
+app.use('/api/Otp/', Authentication);
 
 
 
